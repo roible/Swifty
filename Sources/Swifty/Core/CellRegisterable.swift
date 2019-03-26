@@ -9,13 +9,9 @@
 import UIKit
 #endif
 
-public protocol CellRegisterable: class, Identifierible {
-    
-}
+public protocol CellRegisterable: class, Identifierible {}
 
-public protocol NibCellRegisterable: CellRegisterable {
-    
-}
+public protocol NibCellRegisterable: CellRegisterable {}
 
 #if os(iOS)
 extension NibCellRegisterable {
@@ -23,6 +19,9 @@ extension NibCellRegisterable {
         return UINib(nibName: identifier, bundle: nil)
     }
 }
+
+extension UITableView: SwiftyCompatible {}
+extension UICollectionView: SwiftyCompatible {}
 
 extension SwiftyWrapper where Base: UITableView {
     @discardableResult
