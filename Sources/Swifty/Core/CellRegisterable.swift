@@ -42,7 +42,7 @@ extension SwiftyWrapper where Base: UITableView {
     }
     
     public func dequeueReusableCell<Cell>(of cellType: Cell.Type) -> Cell? where Cell: CellRegisterable {
-        return base.dequeueReusableCell(withIdentifier: Cell.identifier) as Cell
+        return base.dequeueReusableCell(withIdentifier: Cell.identifier) as? Cell
     }
 }
 
