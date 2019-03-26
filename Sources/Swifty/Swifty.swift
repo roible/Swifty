@@ -19,7 +19,7 @@ public protocol SwiftyCompatible {}
 
 extension SwiftyCompatible {
     // swiftlint:disable identifier_name
-    var sf: SwiftyWrapper<Self> {
+    public var sf: SwiftyWrapper<Self> {
         return SwiftyWrapper(self)
     }
 }
