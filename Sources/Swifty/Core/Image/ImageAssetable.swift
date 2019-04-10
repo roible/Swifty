@@ -9,11 +9,9 @@ import Foundation
 
 #if os(OSX)
 import AppKit.NSImage
-public typealias AssetColor = NSColor
 public typealias Image = NSImage
 #elseif os(iOS) || os(tvOS) || os(watchOS)
 import UIKit.UIImage
-public typealias AssetColor = UIColor
 public typealias Image = UIImage
 #endif
 

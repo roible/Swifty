@@ -32,6 +32,8 @@
 		B0B76D70225DBDA600AACC89 /* ImageAssetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B76D6E225DBDA600AACC89 /* ImageAssetable.swift */; };
 		B0B76D72225DBE4C00AACC89 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B76D71225DBE4C00AACC89 /* ImageExtension.swift */; };
 		B0B76D73225DBE4C00AACC89 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B76D71225DBE4C00AACC89 /* ImageExtension.swift */; };
+		B0B76D77225DC13B00AACC89 /* ColorAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B76D76225DC13B00AACC89 /* ColorAsset.swift */; };
+		B0B76D78225DC13B00AACC89 /* ColorAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B76D76225DC13B00AACC89 /* ColorAsset.swift */; };
 		OBJ_22 /* Swifty.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Swifty.swift */; };
 		OBJ_29 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_40 /* SwiftyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* SwiftyTests.swift */; };
@@ -63,6 +65,7 @@
 		B065CF09224A61AC0015D1F9 /* Identifierible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifierible.swift; sourceTree = "<group>"; };
 		B0B76D6E225DBDA600AACC89 /* ImageAssetable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAssetable.swift; sourceTree = "<group>"; };
 		B0B76D71225DBE4C00AACC89 /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
+		B0B76D76225DC13B00AACC89 /* ColorAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorAsset.swift; sourceTree = "<group>"; };
 		OBJ_12 /* SwiftyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyTests.swift; sourceTree = "<group>"; };
 		OBJ_13 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
@@ -100,10 +103,10 @@
 		B065CF07224A61980015D1F9 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				B0B76D6D225DBD8A00AACC89 /* Image */,
-				B065CF08224A61AC0015D1F9 /* CellRegisterable.swift */,
 				B065CF09224A61AC0015D1F9 /* Identifierible.swift */,
-				B0119026225CE61B00886FCC /* ViewChainable.swift */,
+				B0B76D75225DC11600AACC89 /* View */,
+				B0B76D74225DC10B00AACC89 /* Color */,
+				B0B76D6D225DBD8A00AACC89 /* Image */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -115,6 +118,23 @@
 				B0B76D71225DBE4C00AACC89 /* ImageExtension.swift */,
 			);
 			path = Image;
+			sourceTree = "<group>";
+		};
+		B0B76D74225DC10B00AACC89 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				B0B76D76225DC13B00AACC89 /* ColorAsset.swift */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
+		B0B76D75225DC11600AACC89 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B065CF08224A61AC0015D1F9 /* CellRegisterable.swift */,
+				B0119026225CE61B00886FCC /* ViewChainable.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		OBJ_10 /* Tests */ = {
@@ -306,6 +326,7 @@
 			files = (
 				B0119028225CE61B00886FCC /* ViewChainable.swift in Sources */,
 				B0B76D73225DBE4C00AACC89 /* ImageExtension.swift in Sources */,
+				B0B76D78225DC13B00AACC89 /* ColorAsset.swift in Sources */,
 				B0B76D70225DBDA600AACC89 /* ImageAssetable.swift in Sources */,
 				B065CF0B224A61AC0015D1F9 /* CellRegisterable.swift in Sources */,
 				B065CF06224A61820015D1F9 /* Swifty.swift in Sources */,
@@ -319,6 +340,7 @@
 			files = (
 				B0119027225CE61B00886FCC /* ViewChainable.swift in Sources */,
 				B0B76D72225DBE4C00AACC89 /* ImageExtension.swift in Sources */,
+				B0B76D77225DC13B00AACC89 /* ColorAsset.swift in Sources */,
 				B0B76D6F225DBDA600AACC89 /* ImageAssetable.swift in Sources */,
 				B065CF0A224A61AC0015D1F9 /* CellRegisterable.swift in Sources */,
 				OBJ_22 /* Swifty.swift in Sources */,
