@@ -16,7 +16,7 @@ public typealias Image = UIImage
 #endif
 
 public protocol ImageAssetable: RawRepresentable, CaseIterable where Self.RawValue == String {
-    var bundle: Bundle? { get set }
+    var bundle: Bundle? { get }
 }
 
 extension ImageAssetable {
