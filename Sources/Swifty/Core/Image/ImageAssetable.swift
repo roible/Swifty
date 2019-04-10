@@ -15,16 +15,25 @@ import UIKit.UIImage
 public typealias Image = UIImage
 #endif
 
-public protocol ImageAssetable: RawRepresentable, CaseIterable where Self.RawValue == String {}
+public protocol ImageAssetable: RawRepresentable, CaseIterable where Self.RawValue == String {
+    var bundle: Bundle? { get set }
+}
 
 extension ImageAssetable {
+    var bundle: Bundle? {
+        #if os(OSX)
+        return Bundle(for: BundleToken.self)
+        #else
+        return nil
+        #endif
+    }
+    
     public var image: Image {
-        let bundle = Bundle(for: BundleToken.self)
         
         #if os(iOS) || os(tvOS)
         let image = Image(named: rawValue, in: bundle, compatibleWith: nil)
         #elseif os(OSX)
-        let image = bundle.image(forResource: rawValue)
+        let image = Bundle(for: BundleToken.self).image(forResource: rawValue)
         #elseif os(watchOS)
         let image = Image(named: rawValue)
         #endif
@@ -38,15 +47,13 @@ extension ImageAssetable {
     }
     
     public static var images: [Image] {
-        let bundle = Bundle(for: BundleToken.self)
-        
         #if os(iOS) || os(tvOS)
         let images = Self.allCases.compactMap {
-            Image(named: $0.rawValue, in: bundle, compatibleWith: nil)
+            Image(named: $0.rawValue, in: $0.bundle, compatibleWith: nil)
         }
         #elseif os(OSX)
         let images = Self.allCases.compactMap {
-            bundle.image(forResource: $0.rawValue)
+            Bundle(for: BundleToken.self).image(forResource: $0.rawValue)
         }
         #elseif os(watchOS)
         let images = Self.allCases.compactMap {
