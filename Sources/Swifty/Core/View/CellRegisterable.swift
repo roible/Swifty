@@ -36,13 +36,12 @@ extension SwiftyWrapper where Base: UITableView {
         return base
     }
     
-    public func dequeueReusableCell<Cell>(of cellType: Cell.Type,
-                                          for indexPath: IndexPath) -> Cell where Cell: CellRegisterable {
-        return base.dequeueReusableCell(withIdentifier: Cell.identifier, for: indexPath) as! Cell
-    }
-    
-    public func dequeueReusableCell<Cell>(of cellType: Cell.Type) -> Cell? where Cell: CellRegisterable {
-        return base.dequeueReusableCell(withIdentifier: Cell.identifier) as? Cell
+    public func dequeueReusableCell<Cell>(for indexPath: IndexPath? = nil) -> Cell where Cell: CellRegisterable {
+        if let index = indexPath {
+            return base.dequeueReusableCell(withIdentifier: Cell.identifier, for: index) as! Cell
+        } else {
+            return base.dequeueReusableCell(withIdentifier: Cell.identifier) as! Cell
+        }
     }
 }
 
@@ -59,9 +58,8 @@ extension SwiftyWrapper where Base: UICollectionView {
         return base
     }
     
-    public func dequeueReusableCell<Cell>(of cellType: Cell.Type,
-                                          for indexPath: IndexPath) -> Cell where Cell: CellRegisterable {
-        return base.dequeueReusableCell(withReuseIdentifier: cellType.identifier, for: indexPath) as! Cell
+    public func dequeueReusableCell<Cell>(for indexPath: IndexPath) -> Cell where Cell: CellRegisterable {
+        return base.dequeueReusableCell(withReuseIdentifier: Cell.identifier, for: indexPath) as! Cell
     }
 }
 #endif

@@ -23,6 +23,7 @@
 /* Begin PBXBuildFile section */
 		B0119027225CE61B00886FCC /* ViewChainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0119026225CE61B00886FCC /* ViewChainable.swift */; };
 		B0119028225CE61B00886FCC /* ViewChainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0119026225CE61B00886FCC /* ViewChainable.swift */; };
+		B02049E9226315B4002895B8 /* UIScreenEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02049E8226315B4002895B8 /* UIScreenEx.swift */; };
 		B065CF06224A61820015D1F9 /* Swifty.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Swifty.swift */; };
 		B065CF0A224A61AC0015D1F9 /* CellRegisterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B065CF08224A61AC0015D1F9 /* CellRegisterable.swift */; };
 		B065CF0B224A61AC0015D1F9 /* CellRegisterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B065CF08224A61AC0015D1F9 /* CellRegisterable.swift */; };
@@ -60,6 +61,7 @@
 
 /* Begin PBXFileReference section */
 		B0119026225CE61B00886FCC /* ViewChainable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewChainable.swift; sourceTree = "<group>"; };
+		B02049E8226315B4002895B8 /* UIScreenEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreenEx.swift; sourceTree = "<group>"; };
 		B065CEFE224A611A0015D1F9 /* Swifty.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Swifty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B065CF08224A61AC0015D1F9 /* CellRegisterable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellRegisterable.swift; sourceTree = "<group>"; };
 		B065CF09224A61AC0015D1F9 /* Identifierible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifierible.swift; sourceTree = "<group>"; };
@@ -100,6 +102,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B02049E722631592002895B8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B02049E8226315B4002895B8 /* UIScreenEx.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		B065CF07224A61980015D1F9 /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_9 /* Swifty.swift */,
+				B02049E722631592002895B8 /* Extensions */,
 				B065CF07224A61980015D1F9 /* Core */,
 			);
 			name = Swifty;
@@ -330,6 +341,7 @@
 				B0B76D70225DBDA600AACC89 /* ImageAssetable.swift in Sources */,
 				B065CF0B224A61AC0015D1F9 /* CellRegisterable.swift in Sources */,
 				B065CF06224A61820015D1F9 /* Swifty.swift in Sources */,
+				B02049E9226315B4002895B8 /* UIScreenEx.swift in Sources */,
 				B065CF0D224A61AC0015D1F9 /* Identifierible.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
